@@ -4,7 +4,7 @@ pipeline {
         maven 'M2_HOME'
     }
     stages {
-        stage('maven Commands') {
+        stage('mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code') {
             agent any
             steps {
                     sh 'mvn clean compile install package'
