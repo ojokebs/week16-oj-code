@@ -1,15 +1,23 @@
 pipeline {
-    agent none 
+    agent any 
     tools {
         maven 'M2_HOME'
     }
-    stages {
-        stage('mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code') {
-            agent any
-            steps {
-                    sh 'mvn clean compile install package'
-                }
+       stages{
+        stage('sonarqube scan'){
+            steps{
+                withSonarQubeEnv('sonarserver'){ 
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code'
             }
+          }
         }
+        stage('all maven commands'){
+            steps{
+                sh 'mvn clean test compile install package'
+            }
+            
+        }
+        
     }
-
+}
+ 
