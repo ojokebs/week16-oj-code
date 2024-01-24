@@ -2,8 +2,6 @@ pipeline {
     agent any
     tools {
         maven 'M2_HOME'
-        // Add the SonarQube Scanner tool definition
-        sonarqube 'sonarserver'
     }
     stages {
         stage('sonarqube scan') {
