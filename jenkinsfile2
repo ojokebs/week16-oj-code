@@ -4,16 +4,16 @@ pipeline {
         maven 'M2_HOME'
     }
     stages {
-        stage('sonarqube scan') {
-            steps {
+      //  stage('sonarqube scan') {
+          //  steps {
                 // Use the 'tool' step to ensure the correct SonarQube Scanner is used
               //  script {
                 //    withSonarQubeEnv('sonarqube') {
                   //      sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code -Dsonar.organization=ojokebs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=315959d2646592f53840ef2fed255d6b7e1dd3f1'
                    // }
                // }
-            }
-        }
+         //   }
+     //   }
         stage('all maven commands') {
             steps {
                 sh 'mvn clean install package'
