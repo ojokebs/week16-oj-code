@@ -4,7 +4,7 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        scannerHome = tool 'SonarQube' 
+        scannerHome = tool 'sonarQube' 
     }
     stages {
         stage('sonarqube scan') {
