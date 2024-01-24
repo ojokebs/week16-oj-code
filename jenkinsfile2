@@ -8,7 +8,8 @@ pipeline {
             steps{
                 withSonarQubeEnv('sonarserver'){ 
                 //sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code'
-                sh 'sonar:sonar'
+               // sh 'sonar:sonar'
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code -Dsonar.organization=ojokebs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=315959d2646592f53840ef2fed255d6b7e1dd3f1'
             }
           }
         }
