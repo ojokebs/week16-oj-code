@@ -7,7 +7,7 @@ pipeline {
         stage('sonarqube scan'){
             steps{
                 withSonarQubeEnv('sonarserver'){ 
-              sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-codeDsonar.organization=ojokebs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b93bb359da7543bbef9af4825180e5d9bd86ede3'
+              sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-codeDsonar.organization=ojokebs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=b0e181377a15d94b18c7fe10fc7d8822aa3e1e7b'
              // sh 'mvn sonar:sonar'
             }
             }
@@ -22,7 +22,7 @@ pipeline {
 
                 sh 'curl -uadmin:AP5mZ1TGxbfJg5s8o7m1rRSRP4i -T \
                 target/bio*.jar \
-                "http://54.172.210.10:8081/artifactory/geoapp/"'
+                "http://3.86.100.14:8081/artifactory/geoapp/"'
             }
         }
         
