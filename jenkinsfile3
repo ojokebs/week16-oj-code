@@ -6,10 +6,10 @@ pipeline {
     stages {
         stage('Check Current Directory') {
             steps {
-                echo 'Current Directory: '
+                echo 'Current Directory:'
                 sh 'pwd'
 
-                echo 'Current User: '
+                echo 'Current User:'
                 sh 'whoami'
 
              }
