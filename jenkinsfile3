@@ -2,12 +2,18 @@ pipeline {
     agent {
         label 'ansible'
     }
-    stages{
-        stage('check current directory'){
-            steps{
+    
+    stages {
+        stage('Check Current Directory') {
+            steps {
+                echo 'Current Directory: '
                 sh 'pwd'
+
+                echo 'Current User: '
                 sh 'whoami'
-                sh "mkdir \$(date '+%Y%m%d_%H%M%S')"
+                sh 'date'
+
+               
             }
         }
     }
