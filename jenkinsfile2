@@ -10,7 +10,7 @@ pipeline {
                 withSonarQubeEnv('sonarQube'){ 
 
 
-              sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code-Dsonar.organization=ojokebs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=0727452cab6fd1b4168f814ef9b79dc7aa39cb80
+              sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ojokebs_week16-oj-code' 
 '
              // sh 'mvn sonar:sonar'
 
