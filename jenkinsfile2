@@ -27,7 +27,7 @@ pipeline {
 
                 sh 'curl -uadmin:AP5mZ1TGxbfJg5s8o7m1rRSRP4i -T \
                 target/bio*.jar \
-                "http://34.227.173.196:8081/artifactory/geoapp/"'
+                "http://ec2-3-86-93-37.compute-1.amazonaws.com:8081/artifactory/geo-app/"'
 
             }
         }
